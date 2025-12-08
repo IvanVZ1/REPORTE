@@ -2,7 +2,86 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Descargar archivo</title>
+    <title>Descargar archivo RAR</title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #1f2937, #4b5563);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: #f3f4f6;
+      }
+
+      .contenedor {
+        background: rgba(31, 41, 55, 0.85);
+        padding: 40px 50px;
+        border-radius: 16px;
+        backdrop-filter: blur(8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        animation: aparecer 0.8s ease;
+        width: 320px;
+      }
+
+      @keyframes aparecer {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      h1 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #e5e7eb;
+      }
+
+      p {
+        font-size: 14px;
+        margin-bottom: 25px;
+        color: #9ca3af;
+      }
+
+      .btn-descargar {
+        display: inline-block;
+        padding: 12px 30px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        background: #2563eb;
+        color: white;
+        text-decoration: none;
+        transition: 0.25s ease;
+        box-shadow: 0 6px 12px rgba(37, 99, 235, 0.4);
+      }
+
+      .btn-descargar:hover {
+        background: #1d4ed8;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 18px rgba(37, 99, 235, 0.5);
+      }
+
+      .btn-descargar:active {
+        background: #1e40af;
+        transform: translateY(1px);
+        box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+      }
+    </style>
   </head>
+
+  <body>
+    <div class="contenedor">
+      <h1>Descargar archivo</h1>
+      <p>Haz clic para obtener el archivo comprimido en formato RAR.</p>
+
+      <a href="./CURSO.rar" download class="btn-descargar">
+        Descargar CURSO.RAR
+      </a>
+    </div>
   </body>
 </html>
